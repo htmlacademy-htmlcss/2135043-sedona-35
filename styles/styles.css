@@ -30,17 +30,39 @@
   font-display: swap;
 }
 
+html{
+  height: 100%;
+}
+
 body{
-font-family: "PT Sans", sans-serif;
-font-size: 18px;
-line-height: 21px;
-color: #000000;
-background-color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  min-height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.main-container{
+  flex-grow: 1;
 }
 
 .page-header{
   color: #000000;
   background-color: #ffffff;
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation{
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .navigation-link{
@@ -52,6 +74,18 @@ background-color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+}
+
+.navigation-list{
+  list-style-type: none;
+  width: 600px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user{
+  max-width: 268px;
+  margin-left: auto;
 }
 
 .button{
@@ -69,16 +103,37 @@ background-color: #ffffff;
   line-height: 20px;
 }
 
+.page-container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .hero{
-  background-color: #ffffff;
-  background-image:url("../images/Sedona_mountains.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  color: #000000;
+  position: relative;
+  width: 1200px;
   text-align: center;
+  background-color: #ffffff;
+  background-image: url("../images/Sedona_mountains.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero::before{
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 57px;
+  background: url("../images/vector_sedona_mountains.svg") no-repeat center center / cover;
 }
 
 .welcome{
+  width: 1200px;
+  background-color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -86,21 +141,29 @@ background-color: #ffffff;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin: 0;
 }
 
 .welcome-content{
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  margin-bottom: 0;
 }
 
-.advantages{
+.advantages-list{
+  display: flex;
+  width: 1200px;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item{
   color: #000000;
   background-color: rgba(131, 179, 211, 0.12);
+  list-style-type: none;
+  width: 400px;
 }
 
 .advantages-item-road{
@@ -117,10 +180,12 @@ background-color: #ffffff;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
 }
 
 .advantages-item-description{
   font-weight: 400;
+  margin: 0;
 }
 
 .advantages-item-block{
@@ -138,6 +203,7 @@ background-color: #ffffff;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin: 0;
 }
 
 .search-description{
@@ -156,7 +222,7 @@ background-color: #ffffff;
 .subscription{
   background-color: #000000;
   background-image:url("../images/background_main.jpg");
-  background-size: 100% auto;
+  background-size: 1200px 415px;
   background-repeat: no-repeat;
   color: #ffffff;
   text-align: center;
@@ -166,6 +232,7 @@ background-color: #ffffff;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin: 0;
 }
 
 .subscription-description{
@@ -182,8 +249,18 @@ background-color: #ffffff;
 }
 
 .page-footer{
+  width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
   color: #000000;
+  text-align: center;
+}
+
+.page-footer-container{
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 30px;
 }
 
 .page-footer a{
@@ -202,6 +279,22 @@ background-color: #ffffff;
   line-height: 40px;
   text-align: center;
 }
+
+.footer-social-item{
+  list-style-type: none;
+}
+
+.footer-chapter{
+  width: 400px;
+}
+.footer-social{
+  text-align: start;
+}
+
+.footer-copyright{
+  text-align: end;
+}
+
 
 
 
