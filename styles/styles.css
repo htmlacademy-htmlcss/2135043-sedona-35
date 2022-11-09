@@ -60,7 +60,6 @@ body {
 }
 
 .page-header {
-  color: #000000;
   background-color: #ffffff;
   display: flex;
   width: 1200px;
@@ -110,7 +109,8 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   text-align: center;
-  margin: 0;
+  margin-block: 0;
+  padding-inline: 0;
   padding: 20px 16px;
   box-sizing: border-box;
 }
@@ -121,6 +121,9 @@ body {
 
 .navigation-link:focus-visible {
   color: #756157;
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+  border-radius: 3px;
 }
 
 .navigation-link:active {
@@ -323,7 +326,6 @@ body {
   padding-top: 69px;
   padding-bottom: 90px;
   background-color: #ffffff;
-  color: #000000;
   text-align: center;
 }
 
@@ -333,6 +335,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0 auto;
+  margin-block: 0;
   margin-bottom: 25px;
 }
 
@@ -341,6 +344,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   margin: 0 auto;
+  margin-block: 0;
   color: #333333;
 }
 
@@ -349,14 +353,13 @@ body {
   flex-wrap: wrap;
   width: 1200px;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin-block: 0;
+  padding-inline: 0;
 }
 
 .advantages-item {
   display: flex;
   flex-direction: column;
-  color: #000000;
   background-color: rgba(131, 179, 211, 0.12);
   list-style-type: none;
   width: 400px;
@@ -392,7 +395,6 @@ body {
 }
 
 .item-road {
-  color: #000000;
   background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -495,7 +497,6 @@ body {
 }
 
 .search {
-  color: #000000;
   background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
@@ -519,13 +520,13 @@ body {
   line-height: 26px;
   width: max-content;
   margin: 0 auto;
+  margin-block: 0;
   margin-bottom: 54px;
   color: #333333;
 }
 
 .search-button {
   background-color: #756157;
-  color: #ffffff;
   font-size: 20px;
   line-height: 36px;
 }
@@ -628,15 +629,28 @@ body {
   width: 232px;
   font-size: 20px;
   line-height: 36px;
-  border-width: 0;
+  border: none;
   border-radius: 0 4px 4px 0;
+}
+
+.subscription-button:hover {
+  background-color: #68a2ca;
+}
+
+.subscription-button:focus-visible {
+  background-color: #68a2ca;
+  outline: 2px solid #68a2ca;
+}
+
+.subscription-button:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .page-footer {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
-  color: #000000;
   text-align: center;
 }
 
@@ -666,7 +680,6 @@ body {
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
-  text-align: center;
 }
 
 .contacts-phone:hover {
@@ -685,13 +698,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin-block: 0;
+  padding-inline: 0;
 }
 
 .footer-social-item {
   min-width: 47px;
-  min-height: 50px;
+  min-height: 40px;
 }
 
 .footer-social-link {
@@ -1564,11 +1577,11 @@ body {
 .select-control {
   width: 292px;
   margin-right: 70px;
-  padding: 14px 128px 14px 20px;
+  padding: 14px 40px 14px 20px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  text-align: center;
+  text-align: start;
   color: #333333;
   outline: 2px solid #e5e5e5;
   outline-offset: -2px;
@@ -1727,7 +1740,7 @@ body {
 .button-favorites {
   height: 36px;
   text-align: center;
-  padding: 8px 20px;
+  padding: 8px 0;
   margin: 0;
   box-sizing: border-box;
 }
@@ -1771,7 +1784,7 @@ body {
 .button-favorites-green {
   background-color: #7db54f;
   outline: 2px solid #7db54f;
-  padding: 8px 18px;
+  padding: 8px 0;
   outline-offset: -2px;
 }
 
