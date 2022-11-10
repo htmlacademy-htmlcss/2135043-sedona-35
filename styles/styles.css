@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/ptsans-400.woff2") format(woff2);
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
-  src: url("../fonts/ptsans-700.woff2") format(woff2);
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   font-family: "PT Sans";
   font-weight: 400;
   font-style: italic;
-  src: url("../fonts/ptsans-400.woff2") format(woff2);
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -26,7 +26,7 @@
   font-family: "PT Sans";
   font-weight: 700;
   font-style: italic;
-  src: url("../fonts/ptsans-700.woff2") format(woff2);
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -657,7 +657,9 @@ body {
 .page-footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 1200px;
+  min-height: 40px;
   margin: 0 auto;
   padding: 45px 70px 35px;
   box-sizing: border-box;
@@ -703,6 +705,7 @@ body {
 }
 
 .footer-social-item {
+  display: block;
   min-width: 47px;
   min-height: 40px;
 }
@@ -716,9 +719,22 @@ body {
   position: relative;
 }
 
+.footer-social-link:hover path {
+  fill: #68a2ca;
+}
+
+.footer-social-link:focus-visible path {
+  fill: #68a2ca;
+}
+
+.footer-social-link:active path {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 .footer-copyright {
   position: relative;
   width: 115px;
+  height: 40px;
   text-align: end;
 }
 
@@ -732,39 +748,27 @@ body {
   margin: auto;
 }
 
-.footer-icon:hover {
-  fill: #68a2ca;
-}
-
-.footer-icon:focus-visible {
-  fill: #68a2ca;
-}
-
-.footer-icon:active {
-  fill: rgba(104, 162, 202, 0.3);
-}
-
 .footer-social {
   text-align: start;
 }
 
 .icon-logo {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   padding: 0;
   left: auto;
   fill: #000000;
 }
 
-.icon-logo:hover {
+.footer-copyright-site:hover path {
   fill: #756157;
 }
 
-.icon-logo:focus-visible {
+.footer-copyright-site:focus-visible path {
   fill: #756157;
 }
 
-.icon-logo:active {
+.footer-copyright-site:active path {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -1740,7 +1744,7 @@ body {
 .button-favorites {
   height: 36px;
   text-align: center;
-  padding: 8px 0;
+  padding: 8px 15px;
   margin: 0;
   box-sizing: border-box;
 }
@@ -1784,7 +1788,7 @@ body {
 .button-favorites-green {
   background-color: #7db54f;
   outline: 2px solid #7db54f;
-  padding: 8px 0;
+  padding: 8px 15px;
   outline-offset: -2px;
 }
 
@@ -1856,7 +1860,7 @@ body {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
   outline: 1px solid rgba(255, 255, 255, 0.3);
-  outline-offset: -1;
+  outline-offset: -1px;
 }
 
 .pagination-link-ten {
@@ -1872,18 +1876,26 @@ body {
 .pagination-current:hover,
 .pagination-points:hover {
   background-color: #f2f2f2;
+  color: #000000;
   outline: transparent;
 }
 
-.pagination-current:focus-visible,
-.pagination-points:focus-visible {
+.pagination-current:focus-visible {
   background-color: #f2f2f2;
+  color: #000000;
+  outline: transparent;
+}
+
+.pagination-points:focus-visible {
+  background-color: #e6e6e6;
+  color: #000000;
   outline: transparent;
 }
 
 .pagination-current:active,
 .pagination-points:active {
   background-color: #f2f2f2;
+  color: #000000;
   outline: transparent;
 }
 
